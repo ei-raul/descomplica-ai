@@ -14,7 +14,7 @@ O projeto em si tem como público prioritário estudantes do ensino médio de Qu
 ## Product Purpose
 
 Site do projeto de extensão **Descomplica AI** (curso de Sistemas de Informação, UniCatólica): leva a IA da universidade para a escola e a comunidade de Quixadá, de forma acessível, prática e crítica, com foco em uso consciente, ético e seguro.
-O site precisa hoje (1) apresentar o projeto formalmente (visão geral, objetivos, frentes, público, cronograma, resultados esperados, avaliação) e (2) captar escolas parceiras.
+O site precisa hoje (1) apresentar o projeto formalmente (visão geral, uso consciente de IA, objetivos, frentes, público, resultados esperados, avaliação) e (2) captar escolas parceiras.
 
 ## Positioning
 
@@ -22,7 +22,7 @@ Alunos de SI (1º ao 6º semestre) são os executores: traduzem conceitos comple
 
 ## Operating Context
 
-Edição única planejada, com metas: 6 escolas parceiras, 10 oficinas, ~200 estudantes alcançados (~500 pessoas no total), 1 evento no campus. Seis frentes: Oficinas "Mão na IA", Estúdio de Conteúdo (Instagram/TikTok), Rodas de Conversa, Evento no Campus / SATI, IA & Segurança (opcional), Coordenação & Gestão. Cronograma em duas trilhas: confirmado e sugerido. Avaliação contínua em três dimensões (impacto no público, formação dos executores, gestão do projeto).
+Edição única planejada, com metas: 6 escolas parceiras, 10 oficinas, ~200 estudantes alcançados (~500 pessoas no total), 1 evento no campus. Seis frentes: Oficinas "Mão na IA", Estúdio de Conteúdo (Instagram/TikTok), Rodas de Conversa, Evento no Campus / SATI, IA & Segurança (opcional), Coordenação & Gestão. O cronograma é informação interna e não aparece no site. Avaliação contínua em três dimensões (impacto no público, formação dos executores, gestão do projeto).
 
 ## Capabilities and Constraints
 
@@ -44,9 +44,10 @@ Fatos confirmados para a parceria: a oficina é gratuita para a escola e dura 1h
 ## Product Principles
 
 1. Clareza antes de impacto: quem não conhece IA entende o projeto sem jargão.
-2. Honestidade sobre o estágio: o que é planejado e o que é sugerido aparece separado; sem resultados ou parcerias inventados.
+2. Honestidade sobre o estágio: nada de resultados, parcerias ou números inventados; o que é interno ao projeto (cronograma) não vai ao site.
 3. Serve a vários públicos na mesma página sem escolher um deles; a leitura formal convive com o convite às escolas.
-4. O caminho para uma escola parceira entrar em contato precisa ser óbvio quando existir um canal real.
+4. O caminho para uma escola parceira entrar em contato precisa ser óbvio.
+5. A IA entra como apoio ao aprendizado, nunca como substituta do pensamento: estudantes precisam saber que delegar tudo à ferramenta arrisca o pensamento crítico, o raciocínio e a resolução de problemas.
 
 ## Accessibility & Inclusion
 

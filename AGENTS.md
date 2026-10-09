@@ -42,7 +42,7 @@ Novas páginas: `nome-da-pagina.html` na raiz, reutilizando `css/` e `js/`. Pág
 
 - Código novo: `const`/`let`, funções pequenas, sem globais. Para vários arquivos, `<script type="module" src="...">`.
 - `js/main.js` é legado em estilo ES5 dentro de um IIFE: edite-o no estilo dele e **não reescreva em massa** junto de outra mudança.
-- Selecione elementos por classe/`data-*`, não por texto ou posição. Dados da página (ações do cronograma etc.) ficam em constantes no topo do arquivo, separados da lógica.
+- Selecione elementos por classe/`data-*`, não por texto ou posição. Dados da página (listas de conteúdo etc.) ficam em constantes no topo do arquivo, separados da lógica.
 - Nunca use `innerHTML` com texto que não seja constante do repositório (XSS). Prefira `textContent`/`createElement`.
 - A página deve continuar legível sem JS (conteúdo no HTML; JS só melhora). Use `IntersectionObserver` com fallback, como já é feito.
 

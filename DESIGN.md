@@ -189,7 +189,7 @@ Formas amigáveis e arredondadas, sem cantos agudos. Cartões grandes usam 16px 
 ## Components
 
 ### Buttons
-- **Primário (convite às escolas):** pílula Laranja Brasa com texto Tinta Ameixa, 48px de altura, 700/15px; é o único estilo de botão de conversão e aparece em três lugares: hero, cartão escuro da faixa "Convide sua escola" e rodapé. Hover sobe 2px com sombra maior; foco violeta (Brasa Suave sobre o cartão escuro). Variante discreta: "Copiar e-mail", pílula de contorno claro sobre o cartão escuro, criada pelo JS.
+- **Primário (convite às escolas):** pílula Laranja Brasa com texto Tinta Ameixa, 48px de altura, 700/15px; é o único estilo de botão de conversão e aparece em três lugares: hero, cartão escuro da faixa "Convide-nos para sua escola" e rodapé. Hover sobe 2px com sombra maior; foco violeta (Brasa Suave sobre o cartão escuro). Variante discreta: "Copiar e-mail", pílula de contorno claro sobre o cartão escuro, criada pelo JS.
 - **Recolher (`details.fold`):** pílula branca de 44px com `+` que gira ao abrir; recolhe "Como avaliamos". Links de âncora para a seção abrem o conteúdo.
 
 ### Chips
@@ -212,7 +212,7 @@ Cartão com ícone quadrado colorido (34px, 10px de raio), título, função em 
 ### Uso consciente de IA (signature)
 Três competências (pensamento crítico, raciocínio, resolução de problemas) como lista de definição: filete de 3px no topo em violeta, termo em Bricolage 700/18px e descrição em Névoa. Abaixo, "Dois caminhos para a mesma tarefa": **Delegar tudo** (cartão branco, texto Névoa, marcadores vazados) contra **Pensar com a IA** (cartão Jabuticaba Suave com borda violeta, texto Tinta Ameixa, marcadores cheios). Quatro passos por caminho, sem numeral. O tom é de convite, não de bronca.
 
-### Faixa "Convide sua escola"
+### Faixa "Convide-nos para sua escola"
 Primeira seção depois do hero, sem número. Lista numerada de três passos separados por fios (sem cartões), painel "A escola oferece", três perguntas em `details` e o cartão escuro com o botão primário e o e-mail. É a principal conversão do site.
 
 ### Exemplo de conversa

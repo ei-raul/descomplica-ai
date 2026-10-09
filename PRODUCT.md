@@ -36,6 +36,7 @@ Edição única planejada, com metas: 6 escolas parceiras, 10 oficinas, ~200 est
 - Nome e jogo de palavras: **AI** (inteligência artificial) / "descomplica **aí**" (o jeito da gente).
 - Linguagem acessível e tom próximo, sem jargão, pensada para adolescentes e famílias.
 - Favicon atual em `img/favicon.png`.
+- Perfil oficial no Instagram: https://www.instagram.com/desc0mplica.ai (@desc0mplica.ai).
 
 ## Evidence on Hand
 

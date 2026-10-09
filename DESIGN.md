@@ -72,6 +72,12 @@ components:
     textColor: "{colors.papel}"
     rounded: "{rounded.lg}"
     padding: "30px 32px"
+  button-primary:
+    backgroundColor: "{colors.brasa}"
+    textColor: "{colors.tinta-ameixa}"
+    rounded: "{rounded.pill}"
+    height: "48px"
+    padding: "12px 26px"
   segment:
     backgroundColor: "{colors.papel}"
     textColor: "{colors.nevoa}"
@@ -122,7 +128,7 @@ components:
 
 **Creative North Star: "O Caderno de Oficina"**
 
-O site é uma página de caderno de bancada aberta sobre papel de aveia: títulos grandes e redondos, anotações em mono pequeno, cartões brancos soltos sobre a página e duas tintas, laranja brasa e violeta jabuticaba. A voz visual é prática e próxima, de quem mostra como a coisa funciona ("mão na IA"), nunca de relatório institucional frio. O nome carrega o jogo AI / "aí" e o título o performa em itálico laranja sublinhado tracejado.
+O site é uma página de caderno de bancada aberta sobre papel de aveia: títulos grandes e redondos, anotações em mono pequeno, cartões brancos soltos sobre a página e duas tintas, laranja brasa e violeta jabuticaba. A voz visual é prática e próxima, de quem mostra como a coisa funciona ("mão na IA"), nunca de relatório institucional frio. O nome carrega o jogo AI / "aí" e o título o performa em itálico laranja sublinhado tracejado. O hero é literalmente a página do caderno: pauta horizontal de 32px em Fio Quente que esmaece para baixo e uma linha de margem em Rosa Suave à esquerda.
 
 A densidade é média e arejada: seções de 66px de respiro verticais, cartões em grade, uma coluna de leitura de 760px nos textos longos. A tipografia faz a hierarquia; cor e sombra apoiam. A página tem dois eixos semânticos que não se misturam: **laranja = confirmado, ação, destaque**; **violeta = sugerido, apoio, reflexão**.
 
@@ -138,7 +144,7 @@ A densidade é média e arejada: seções de 66px de respiro verticais, cartões
 Duas tintas quentes sobre papel de aveia, com tintas escuras de ameixa para texto. Toda cor tem uma versão `soft` (fundo de etiqueta) e uma `ink` (texto sobre o soft), que garantem contraste legível.
 
 ### Primary
-- **Laranja Brasa** (#E8641A): destaque e ação, só em fundos, bordas, ícones e texto grande (≥24px, ou ≥18,66px em negrito). Itálico "AI" do título e da marca, métricas, setas das listas, ponto do eyebrow, trilha **confirmado** do cronograma e fundo do botão ativo dessa trilha.
+- **Laranja Brasa** (#E8641A): destaque e ação, só em fundos, bordas, ícones e texto grande (≥24px, ou ≥18,66px em negrito). Itálico "AI" do título e da marca, métricas, setas das listas, trilha **confirmado** do cronograma e fundo do botão ativo dessa trilha.
 - **Brasa Suave** (#FBE3D0): fundo de link ativo da navegação, badge confirmado, ícone da frente de oficinas.
 - **Tinta Brasa** (#9C3D07): todo texto laranja pequeno: números das seções e dos objetivos, link do rodapé, texto sobre Brasa Suave e destaques em negrito de rótulos (`.dual b`). Contraste de 6,2 a 6,8:1.
 
@@ -177,7 +183,7 @@ Duas tintas quentes sobre papel de aveia, com tintas escuras de ameixa para text
 - **Headline** (700, `clamp(28px, 4vw, 40px)`, 1.05, tracking -0.03em): títulos de seção (`h2`).
 - **Title** (700, 15–18px, tracking -0.01 a -0.02em): títulos de cartão (`h3`, `h4`).
 - **Body** (400, 14–15px, 1.6): texto de cartões e listas; o `lead` sobe para 18px e limita-se a 760px.
-- **Label** (400–700, 12–13px, tracking 0.06–0.14em, caixa-alta): eyebrow, rótulos de filtro, funções das frentes, datas, badges, números de seção e de objetivo.
+- **Label** (400–700, 12–13px, tracking 0.06–0.14em, caixa-alta): rótulos de filtro, funções das frentes, datas, badges, números de seção e de objetivo.
 
 ### Named Rules
 **The Annotation Rule.** Space Mono entra para o que é dado e anotação (datas, números, rótulos, chips), nunca para parágrafos. Caixa-alta só em rótulos curtos de até quatro palavras.
@@ -194,7 +200,7 @@ Responsivo com `max-width`: abaixo de **860px** a navegação some, grades viram
 
 ## Elevation & Depth
 
-Híbrido suave. Em repouso, a profundidade vem de **borda quente + cartão branco sobre aveia**; a sombra é ambiente e baixa. Só a interação levanta o cartão (frentes sobem 3px com sombra maior). Há também dois brilhos radiais decorativos no hero (laranja à direita, violeta à esquerda) e um brilho laranja no canto do cartão escuro.
+Híbrido suave. Em repouso, a profundidade vem de **borda quente + cartão branco sobre aveia**; a sombra é ambiente e baixa. Só a interação levanta o cartão (frentes sobem 3px com sombra maior). Não há brilhos decorativos no hero (a pauta e a margem os substituem); só o cartão escuro tem um brilho laranja no canto.
 
 ### Shadow Vocabulary
 - **Cartão ambiente** (`box-shadow: 0 1px 2px rgba(34,26,43,.05), 0 10px 30px -18px rgba(34,26,43,.35)`): todos os cartões, fatos, métricas e segmentos em repouso.
@@ -214,7 +220,9 @@ Formas amigáveis e arredondadas, sem cantos agudos. Cartões grandes usam 16px 
 - **Default:** fundo transparente, texto Névoa, 13px/600.
 - **Hover:** texto passa a Tinta Ameixa.
 - **Active:** fundo Tinta Ameixa e texto branco; os segmentos de trilha assumem a cor da própria trilha: violeta com texto branco; laranja com texto Tinta Ameixa (contraste), e o swatch acompanha o texto. Em telas de toque (`pointer: coarse`) a altura mínima é 44px.
-- Interação de filtro: não há botão primário "grande"; ação é filtro, não conversão.
+- **Primário (convite às escolas):** pílula Laranja Brasa com texto Tinta Ameixa, 48px de altura, 700/15px; é o único estilo de botão de conversão e aparece em três lugares: hero, cartão escuro da faixa "Convide sua escola" e rodapé. Hover sobe 2px com sombra maior; foco violeta (Brasa Suave sobre o cartão escuro). Variante discreta: "Copiar e-mail", pílula de contorno claro sobre o cartão escuro, criada pelo JS.
+- **Recolher (`details.fold`):** pílula branca de 44px com `+` que gira ao abrir; recolhe Cronograma e Avaliação. Links de âncora para essas seções abrem o conteúdo.
+- Fora dele, ação é filtro, não conversão.
 
 ### Chips
 - **Filtro de frente:** pílula branca com fio quente, texto mono 12px; ativo vira Tinta Ameixa com texto branco; ponto colorido da frente à esquerda.
@@ -229,13 +237,19 @@ Formas amigáveis e arredondadas, sem cantos agudos. Cartões grandes usam 16px 
 - **Internal Padding:** 18–26px; 30px no cartão escuro.
 
 ### Navigation
-Barra fixa de 64px sobre Aveia a 82% com blur de 12px e fio quente embaixo. Marca à esquerda em Bricolage 800/20px com "AI" em itálico laranja (20px o qualifica como texto grande). Links em pílulas de 13.5px/500 em Névoa; o link da seção visível ganha Brasa Suave e Tinta Brasa. Abaixo de 860px os links viram um painel que abre sob o cabeçalho por um botão de menu em pílula (44px, hambúrguer que vira ×), com `aria-expanded`; fecha ao tocar num link, fora do painel ou com Esc. Sem JavaScript, os links ficam escondidos. O primeiro item da página é o link "Pular para o conteúdo", em pílula Tinta Ameixa, visível só no foco.
+Barra fixa de 64px sobre Aveia a 82% com blur de 12px e fio quente embaixo. Marca à esquerda em Bricolage 800/20px com "AI" em itálico laranja (20px o qualifica como texto grande). Links em pílulas de 13.5px/500 em Névoa; o link da seção visível ganha Brasa Suave e Tinta Brasa. Abaixo de 860px os links viram um painel que abre sob o cabeçalho por um botão de menu em pílula (44px, hambúrguer que vira ×), com `aria-expanded`; fecha ao tocar num link, fora do painel ou com Esc. Fora do painel, visível também no celular, há uma pílula preenchida "Escolas" ao lado do menu (no desktop é o último link, em Laranja Brasa com texto Tinta Ameixa, fora da detecção de seção ativa). Sem JavaScript, os links ficam escondidos e só a pílula "Escolas" permanece. O primeiro item da página é o link "Pular para o conteúdo", em pílula Tinta Ameixa, visível só no foco.
 
 ### Frente (cartão expansível)
 Cartão com ícone quadrado colorido (34px, 10px de raio), título, função em mono caixa-alta e resumo; um `+` mono no canto vira `×` ao abrir e revela um texto extra por transição de altura. O título é um `<button>` com `aria-expanded` criado pelo JS e estendido ao cartão inteiro; o foco aparece como contorno violeta de 2px em volta do cartão. Sem JS, o texto extra fica sempre visível.
 
 ### Cronograma (signature)
-Linha vertical em gradiente laranja→violeta com marcadores circulares. **Confirmado**: marcador cheio laranja e borda esquerda sólida. **Sugerido**: marcador tracejado violeta, borda esquerda tracejada. Cada cartão tem badge de trilha, frente com ponto de cor, título, descrição e carga horária em caixa mono.
+Linha vertical em gradiente laranja→violeta com marcadores circulares. **Confirmado**: marcador cheio laranja e borda esquerda sólida. **Sugerido**: marcador tracejado violeta, borda esquerda tracejada. Cada cartão tem badge de trilha, frente com ponto de cor, título e descrição. Os itens são uma lista ordenada. O badge **Confirmado** é um carimbo: contorno de 1,5px em Tinta Brasa, sem fundo, levemente inclinado (-2°).
+
+### Faixa "Convide sua escola"
+Primeira seção depois do hero, sem número. Lista numerada de três passos separados por fios (sem cartões), painel "A escola oferece", três perguntas em `details` e o cartão escuro com o botão primário e o e-mail. É a principal conversão do site.
+
+### Exemplo de conversa
+Cartão branco com duas falas separadas por fio tracejado: "Você" em Space Mono (como texto digitado) e "IA" em Inter, com a legenda "Exemplo ilustrativo". Fica na seção Frentes e não faz afirmações sobre resultados.
 
 ## Do's and Don'ts
 
@@ -246,6 +260,7 @@ Linha vertical em gradiente laranja→violeta com marcadores circulares. **Confi
 - **Do** fazer hierarquia com Bricolage + Inter + Space Mono, nesta ordem de papel: título, leitura, anotação.
 - **Do** manter 12px como tamanho mínimo de qualquer texto, e usar Tinta Brasa em texto laranja pequeno.
 - **Do** manter cartões brancos com borda de 1px em Fio Quente e sombra ambiente; levantar só no hover.
+- **Do** manter o hero como página de caderno (pauta + margem) e sem brilhos radiais.
 - **Do** usar pílula para qualquer controle, e `prefers-reduced-motion` para toda animação nova.
 
 ### Don't:

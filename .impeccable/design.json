@@ -350,11 +350,19 @@
       "description": "Cartão da linha do tempo; confirmado = borda sólida laranja, sugerido = tracejada violeta.",
       "html": "<div class=\"ds-tl\"><div class=\"ds-card ds-c\"><div class=\"ds-meta\"><span class=\"ds-badge ds-bc\">Confirmado</span></div><h4>Oficina nas escolas</h4><p>Primeiro ciclo de oficinas em duplas.</p></div><div class=\"ds-card ds-s\"><div class=\"ds-meta\"><span class=\"ds-badge ds-bs\">Sugerido</span></div><h4>Roda de conversa</h4><p>Ética e desinformação.</p></div></div>",
       "css": ":host{--bg:#FBF4EC;--surface:#FFFFFF;--ink:#221A2B;--muted:#6E6478;--line:#EEE1D3;--orange:#E8641A;--orange-soft:#FBE3D0;--orange-ink:#9C3D07;--violet:#6B49B6;--violet-soft:#EBE3F8;--violet-ink:#4A2E86;--shadow:0 1px 2px rgba(34,26,43,.05),0 10px 30px -18px rgba(34,26,43,.35);--radius:16px}.ds-tl{display:grid;gap:12px;max-width:420px;font-family:Inter,system-ui,sans-serif;color:var(--ink)}.ds-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 22px;box-shadow:var(--shadow)}.ds-c{border-left:4px solid var(--orange)}.ds-s{border-left:4px dashed var(--violet)}.ds-meta{margin-bottom:5px}.ds-badge{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;font-weight:700}.ds-bc{background:var(--orange-soft);color:var(--orange-ink)}.ds-bs{background:var(--violet-soft);color:var(--violet-ink)}.ds-card h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.01em;margin-bottom:3px}.ds-card p{font-size:13.5px;color:var(--muted)}"
+    },
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Único botão de conversão: pílula Brasa com texto Tinta Ameixa, usada no cartão escuro de convite.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Escrever para o projeto</a>",
+      "css": ":host{--ink:#221A2B;--orange:#E8641A;--orange-soft:#FBE3D0;--shadow:0 1px 2px rgba(34,26,43,.05),0 10px 30px -18px rgba(34,26,43,.35)}.ds-btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 26px;border-radius:999px;background:var(--orange);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}.ds-btn:hover{transform:translateY(-2px)}.ds-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}"
     }
   ],
   "narrative": {
     "northStar": "O Caderno de Oficina",
-    "overview": "O site é uma página de caderno de bancada aberta sobre papel de aveia: títulos grandes e redondos, anotações em mono pequeno, cartões brancos soltos sobre a página e duas tintas, laranja brasa e violeta jabuticaba. A voz visual é prática e próxima, de quem mostra como a coisa funciona (\"mão na IA\"), nunca de relatório institucional frio. O nome carrega o jogo AI / \"aí\" e o título o performa em itálico laranja sublinhado tracejado.\n\nA densidade é média e arejada: seções de 66px de respiro verticais, cartões em grade, uma coluna de leitura de 760px nos textos longos. A tipografia faz a hierarquia; cor e sombra apoiam. A página tem dois eixos semânticos que não se misturam: **laranja = confirmado, ação, destaque**; **violeta = sugerido, apoio, reflexão**.",
+    "overview": "O site é uma página de caderno de bancada aberta sobre papel de aveia: títulos grandes e redondos, anotações em mono pequeno, cartões brancos soltos sobre a página e duas tintas, laranja brasa e violeta jabuticaba. A voz visual é prática e próxima, de quem mostra como a coisa funciona (\"mão na IA\"), nunca de relatório institucional frio. O nome carrega o jogo AI / \"aí\" e o título o performa em itálico laranja sublinhado tracejado. O hero é literalmente a página do caderno: pauta horizontal de 32px em Fio Quente que esmaece para baixo e uma linha de margem em Rosa Suave à esquerda.\n\nA densidade é média e arejada: seções de 66px de respiro verticais, cartões em grade, uma coluna de leitura de 760px nos textos longos. A tipografia faz a hierarquia; cor e sombra apoiam. A página tem dois eixos semânticos que não se misturam: **laranja = confirmado, ação, destaque**; **violeta = sugerido, apoio, reflexão**.",
     "keyCharacteristics": [
       "Fundo de aveia quente (nunca branco puro); branco só nos cartões.",
       "Tinta ameixa no lugar de preto; nenhum `#000`.",
@@ -401,6 +409,7 @@
       "**Do** fazer hierarquia com Bricolage + Inter + Space Mono, nesta ordem de papel: título, leitura, anotação.",
       "**Do** manter 12px como tamanho mínimo de qualquer texto, e usar Tinta Brasa em texto laranja pequeno.",
       "**Do** manter cartões brancos com borda de 1px em Fio Quente e sombra ambiente; levantar só no hover.",
+      "**Do** manter o hero como página de caderno (pauta + margem) e sem brilhos radiais.",
       "**Do** usar pílula para qualquer controle, e `prefers-reduced-motion` para toda animação nova."
     ],
     "donts": [

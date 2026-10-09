@@ -28,7 +28,7 @@ Edição única planejada, com metas: 6 escolas parceiras, 10 oficinas, ~200 est
 
 - Site estático (HTML, CSS e JS puros, sem build), publicado no GitHub Pages em `/descomplica-ai/`; detalhes em AGENTS.md.
 - Conteúdo em pt-BR; deve ser legível sem JS.
-- Em aberto: como a escola entra em contato (hoje não há formulário, e-mail ou outro canal de contato; o único contato é o link do proponente no rodapé). Nada disso deve ser inventado.
+- Canal de contato das escolas: e-mail rauldearaujo@unicatolicaquixada.edu.br (confirmado pelo proponente). Não há formulário, telefone nem back-end.
 - Em aberto: recrutamento de alunos executores não é objetivo atual do site.
 
 ## Brand Commitments
@@ -39,7 +39,7 @@ Edição única planejada, com metas: 6 escolas parceiras, 10 oficinas, ~200 est
 
 ## Evidence on Hand
 
-Conteúdo institucional do projeto (objetivos, frentes, metas, avaliação) já está no site e no README. Não há fotos, depoimentos, números de ações já realizadas, logos de escolas parceiras ou contato de captação: nada disso deve ser fabricado.
+Fatos confirmados para a parceria: a oficina é gratuita para a escola e dura 1h–1h30; a escola oferece sala ou auditório, projetor ou tela, turma e horário na grade, internet e computadores ou celulares. Conteúdo institucional do projeto (objetivos, frentes, metas, avaliação) já está no site e no README. Não há fotos, depoimentos, números de ações já realizadas, logos de escolas parceiras nem prazo de resposta: nada disso deve ser fabricado.
 
 ## Product Principles
 

@@ -3,12 +3,12 @@
 
 /* ---------- data: as duas trilhas do cronograma ---------- */
 var FRENTES = {
-  coord:      {label:"Coordenação",  color:"#221A2B"},
-  oficinas:   {label:"Oficinas",     color:"#E8641A"},
-  conteudo:   {label:"Conteúdo",     color:"#6B49B6"},
-  rodas:      {label:"Rodas",        color:"#3F9D74"},
-  evento:     {label:"Evento/SATI",  color:"#D98A1E"},
-  seguranca:  {label:"Segurança",    color:"#C0556B"}
+  coord:      {label:"Coordenação"},
+  oficinas:   {label:"Oficinas"},
+  conteudo:   {label:"Conteúdo"},
+  rodas:      {label:"Rodas"},
+  evento:     {label:"Evento/SATI"},
+  seguranca:  {label:"Segurança"}
 };
 
 var ITEMS = [
@@ -51,6 +51,7 @@ var ITEMS = [
 /* ---------- render timeline ---------- */
 var timelineEl = document.getElementById("timeline");
 var emptyEl = document.getElementById("tlEmpty");
+var countEl = document.getElementById("tlCount");
 ITEMS.sort(function(a,b){return a.sort-b.sort;});
 
 ITEMS.forEach(function(it){
@@ -64,7 +65,7 @@ ITEMS.forEach(function(it){
     '<div class="tl-card">'+
       '<div class="tl-meta">'+
         '<span class="tl-badge '+it.track+'">'+(it.track==="confirmado"?"Confirmado":"Sugerido")+'</span>'+
-        '<span class="tl-frente"><span class="d" style="background:'+f.color+'"></span>'+f.label+'</span>'+
+        '<span class="tl-frente"><span class="d"></span>'+f.label+'</span>'+
       '</div>'+
       '<h3>'+it.title+'</h3>'+
       '<p>'+it.desc+'</p>'+
@@ -76,14 +77,14 @@ ITEMS.forEach(function(it){
 /* ---------- frente filter buttons ---------- */
 var frenteBar = document.getElementById("frenteBar");
 var allBtn = document.createElement("button");
-allBtn.className = "ff active"; allBtn.setAttribute("data-frente","all");
+allBtn.className = "ff active"; allBtn.setAttribute("data-frente","all"); allBtn.setAttribute("aria-pressed","true");
 allBtn.textContent = "Todas";
 frenteBar.appendChild(allBtn);
 Object.keys(FRENTES).forEach(function(key){
   var f = FRENTES[key];
   var b = document.createElement("button");
-  b.className = "ff"; b.setAttribute("data-frente", key);
-  b.innerHTML = '<span class="d" style="background:'+f.color+'"></span>'+f.label;
+  b.className = "ff"; b.setAttribute("data-frente", key); b.setAttribute("aria-pressed","false");
+  b.innerHTML = '<span class="d"></span>'+f.label;
   frenteBar.appendChild(b);
 });
 
@@ -98,29 +99,45 @@ function applyFilters(){
     if(okT && okF){ el.classList.remove("hide"); shown++; }
     else { el.classList.add("hide"); }
   });
+  countEl.textContent = shown===0 ? "" : shown+(shown===1?" ação exibida":" ações exibidas");
   emptyEl.style.display = shown===0 ? "block" : "none";
   timelineEl.style.display = shown===0 ? "none" : "";
 }
 
+function press(group, sel, btn){
+  group.querySelectorAll(sel).forEach(function(s){
+    s.classList.remove("active"); s.setAttribute("aria-pressed","false");
+  });
+  btn.classList.add("active"); btn.setAttribute("aria-pressed","true");
+}
+
 document.getElementById("trackBar").addEventListener("click", function(e){
   var btn = e.target.closest(".seg"); if(!btn) return;
-  this.querySelectorAll(".seg").forEach(function(s){s.classList.remove("active");});
-  btn.classList.add("active");
+  press(this, ".seg", btn);
   curTrack = btn.getAttribute("data-track");
   applyFilters();
 });
 frenteBar.addEventListener("click", function(e){
   var btn = e.target.closest(".ff"); if(!btn) return;
-  this.querySelectorAll(".ff").forEach(function(s){s.classList.remove("active");});
-  btn.classList.add("active");
+  press(this, ".ff", btn);
   curFrente = btn.getAttribute("data-frente");
   applyFilters();
 });
 
 /* ---------- frentes cards expand ---------- */
 document.querySelectorAll(".frente").forEach(function(card){
-  card.addEventListener("click", function(){ card.classList.toggle("open");
-    card.querySelector(".toggle").textContent = card.classList.contains("open")?"+":"+";
+  var title = card.querySelector("h3");
+  var more = card.querySelector(".more");
+  var btn = document.createElement("button");
+  btn.type = "button"; btn.className = "frente-btn";
+  btn.setAttribute("aria-expanded","false");
+  more.id = "more-"+card.getAttribute("data-frente");
+  btn.setAttribute("aria-controls", more.id);
+  while(title.firstChild) btn.appendChild(title.firstChild);
+  title.appendChild(btn);
+  card.classList.add("collapsible");
+  btn.addEventListener("click", function(){
+    btn.setAttribute("aria-expanded", card.classList.toggle("open"));
   });
 });
 
@@ -147,6 +164,9 @@ function setMenu(open){
 }
 navBtn.addEventListener("click", function(){ setMenu(!navEl.classList.contains("open")); });
 links.forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+document.addEventListener("click", function(e){
+  if(navEl.classList.contains("open") && !navEl.contains(e.target)) setMenu(false);
+});
 document.addEventListener("keydown", function(e){
   if(e.key==="Escape" && navEl.classList.contains("open")){ setMenu(false); navBtn.focus(); }
 });
@@ -177,6 +197,7 @@ function countUp(el){
   requestAnimationFrame(step);
 }
 if("IntersectionObserver" in window){
+  if(!reduce) document.querySelectorAll("[data-count]").forEach(function(el){el.textContent = "0";});
   var io2 = new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if(en.isIntersecting){ countUp(en.target); io2.unobserve(en.target);} });
   },{threshold:.5});

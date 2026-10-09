@@ -13,39 +13,39 @@ var FRENTES = {
 
 var ITEMS = [
   {sort:20260828, date:"28 ago – 17 set<br>2026", track:"confirmado", frente:"coord",
-    title:"Estruturação e capacitação da equipe", desc:"Definição das equipes e líderes e formação inicial dos alunos executores.", carga:"8h"},
+    title:"Estruturação e capacitação da equipe", desc:"Definição das equipes e líderes e formação inicial dos alunos executores."},
   {sort:20260910, date:"set – out<br>2026", track:"sugerido", frente:"conteudo",
-    title:"Identidade visual da marca", desc:"Logo, cores e assinatura — explorando o duplo sentido AI / “aí”.", carga:""},
+    title:"Identidade visual da marca", desc:"Logo, cores e assinatura — explorando o duplo sentido AI / “aí”."},
   {sort:20260924, date:"24 set<br>2026", track:"confirmado", frente:"coord",
-    title:"Reunião de estruturação", desc:"Apresentação do projeto e definição de equipes e líderes.", carga:""},
+    title:"Reunião de estruturação", desc:"Apresentação do projeto e definição de equipes e líderes."},
   {sort:20261008, date:"08 out<br>2026", track:"confirmado", frente:"coord",
-    title:"Capacitação das equipes", desc:"Formação dos alunos que irão compor as equipes de trabalho.", carga:""},
+    title:"Capacitação das equipes", desc:"Formação dos alunos que irão compor as equipes de trabalho."},
   {sort:20261015, date:"out<br>2026", track:"sugerido", frente:"oficinas",
-    title:"Ensaio-geral / oficina-piloto", desc:"As equipes apresentam a oficina entre si antes de ir a campo.", carga:""},
+    title:"Ensaio-geral / oficina-piloto", desc:"As equipes apresentam a oficina entre si antes de ir a campo."},
   {sort:20261029, date:"29 out<br>2026", track:"confirmado", frente:"coord",
-    title:"Firmar parcerias com escolas", desc:"Identificar escolas e setores, elaborar ofícios e agendar as ações.", carga:"4h"},
+    title:"Firmar parcerias com escolas", desc:"Identificar escolas e setores, elaborar ofícios e agendar as ações."},
   {sort:20261101, date:"out – nov<br>2026", track:"sugerido", frente:"conteudo",
-    title:"Lançar o canal nas redes", desc:"Estúdio de Conteúdo no ar, com meta de publicação semanal.", carga:""},
+    title:"Lançar o canal nas redes", desc:"Estúdio de Conteúdo no ar, com meta de publicação semanal."},
   {sort:20261105, date:"05 nov<br>2026", track:"confirmado", frente:"oficinas",
-    title:"1º ciclo de oficinas nas escolas", desc:"Visitas às escolas para compartilhar conhecimentos e experiências.", carga:"8h"},
+    title:"1º ciclo de oficinas nas escolas", desc:"Visitas às escolas para compartilhar conhecimentos e experiências."},
   {sort:20261110, date:"nov<br>2026", track:"sugerido", frente:"coord",
-    title:"Levantamento de expectativas", desc:"Ouvir o público: o que já sabem e o que querem aprender sobre IA.", carga:""},
+    title:"Levantamento de expectativas", desc:"Ouvir o público: o que já sabem e o que querem aprender sobre IA."},
   {sort:20261126, date:"12 – 26 nov<br>2026", track:"confirmado", frente:"evento",
-    title:"Descomplica AI na SATI", desc:"Ações do projeto na Semana Acadêmica, no campus da UniCatólica.", carga:"4h"},
+    title:"Descomplica AI na SATI", desc:"Ações do projeto na Semana Acadêmica, no campus da UniCatólica."},
   {sort:20270301, date:"mar<br>2027", track:"sugerido", frente:"rodas",
-    title:"Roda de conversa: ética e desinformação", desc:"Debate reflexivo com o público; o conteúdo vira material para as redes.", carga:""},
+    title:"Roda de conversa: ética e desinformação", desc:"Debate reflexivo com o público; o conteúdo vira material para as redes."},
   {sort:20270315, date:"mar – mai<br>2027", track:"sugerido", frente:"oficinas",
-    title:"Rotação temática das oficinas", desc:"IA para estudar · ética e deepfakes · profissões do futuro.", carga:""},
-  {sort:20270325, date:"04 fev – 25 mar<br>2027", track:"confirmado", frente:"evento",
-    title:"Evento de IA no campus", desc:"Planejamento e realização do evento na UniCatólica com o ensino médio.", carga:"8h"},
+    title:"Rotação temática das oficinas", desc:"IA para estudar · ética e deepfakes · profissões do futuro."},
+  {sort:20270204, date:"04 fev – 25 mar<br>2027", track:"confirmado", frente:"evento",
+    title:"Evento de IA no campus", desc:"Planejamento e realização do evento na UniCatólica com o ensino médio."},
   {sort:20270326, date:"25 mar<br>2027", track:"confirmado", frente:"oficinas",
-    title:"Novas ações em outras escolas", desc:"Planejar e realizar o segundo ciclo, ampliando o alcance.", carga:""},
+    title:"Novas ações em outras escolas", desc:"Planejar e realizar o segundo ciclo, ampliando o alcance."},
   {sort:20270410, date:"abr<br>2027", track:"sugerido", frente:"seguranca",
-    title:"IA e Segurança para a comunidade", desc:"Ação sobre golpes com IA, voltada a famílias e idosos (opcional).", carga:""},
+    title:"IA e Segurança para a comunidade", desc:"Ação sobre golpes com IA, voltada a famílias e idosos (opcional)."},
   {sort:20270510, date:"mai<br>2027", track:"sugerido", frente:"rodas",
-    title:"Roda de conversa: IA e o trabalho", desc:"As profissões vão acabar? Reflexão sobre o futuro do mundo do trabalho.", carga:""},
+    title:"Roda de conversa: IA e o trabalho", desc:"As profissões vão acabar? Reflexão sobre o futuro do mundo do trabalho."},
   {sort:20270701, date:"jun – jul<br>2027", track:"sugerido", frente:"coord",
-    title:"Avaliação e 2ª edição", desc:"Consolidar indicadores, relatório final e planejar o próximo ciclo.", carga:""}
+    title:"Avaliação e 2ª edição", desc:"Consolidar indicadores, relatório final e planejar o próximo ciclo."}
 ];
 
 /* ---------- render timeline ---------- */
@@ -56,12 +56,13 @@ ITEMS.sort(function(a,b){return a.sort-b.sort;});
 
 ITEMS.forEach(function(it){
   var f = FRENTES[it.frente];
-  var el = document.createElement("div");
+  var el = document.createElement("li");
   el.className = "tl-item";
   el.setAttribute("data-track", it.track);
   el.setAttribute("data-frente", it.frente);
+  var d = it.date.split("<br>");
   el.innerHTML =
-    '<div class="tl-date">'+it.date+'</div>'+
+    '<div class="tl-date">'+d[0]+' <span class="tl-year">'+d[1]+'</span></div>'+
     '<div class="tl-card">'+
       '<div class="tl-meta">'+
         '<span class="tl-badge '+it.track+'">'+(it.track==="confirmado"?"Confirmado":"Sugerido")+'</span>'+
@@ -69,7 +70,6 @@ ITEMS.forEach(function(it){
       '</div>'+
       '<h3>'+it.title+'</h3>'+
       '<p>'+it.desc+'</p>'+
-      (it.carga?'<span class="tl-carga">carga · '+it.carga+'</span>':'')+
     '</div>';
   timelineEl.appendChild(el);
 });
@@ -124,6 +124,13 @@ frenteBar.addEventListener("click", function(e){
   applyFilters();
 });
 
+document.getElementById("tlReset").addEventListener("click", function(){
+  curTrack = "all"; curFrente = "all";
+  press(document.getElementById("trackBar"), ".seg", document.querySelector('.seg[data-track="all"]'));
+  press(frenteBar, ".ff", allBtn);
+  applyFilters();
+});
+
 /* ---------- frentes cards expand ---------- */
 document.querySelectorAll(".frente").forEach(function(card){
   var title = card.querySelector("h3");
@@ -142,7 +149,7 @@ document.querySelectorAll(".frente").forEach(function(card){
 });
 
 /* ---------- active nav link on scroll ---------- */
-var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a:not(.nav-pill)"));
 var secs = links.map(function(a){return document.querySelector(a.getAttribute("href"));});
 function onScroll(){
   var pos = window.scrollY + 90;
@@ -163,13 +170,41 @@ function setMenu(open){
   navBtn.setAttribute("aria-expanded", open);
 }
 navBtn.addEventListener("click", function(){ setMenu(!navEl.classList.contains("open")); });
-links.forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+navEl.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
 document.addEventListener("click", function(e){
   if(navEl.classList.contains("open") && !navEl.contains(e.target)) setMenu(false);
 });
 document.addEventListener("keydown", function(e){
   if(e.key==="Escape" && navEl.classList.contains("open")){ setMenu(false); navBtn.focus(); }
 });
+
+/* ---------- abre a seção recolhida ao navegar para ela ---------- */
+function openFold(hash){
+  var t = hash.length>1 && document.querySelector(hash);
+  var f = t && t.querySelector("details.fold");
+  if(f) f.open = true;
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener("click", function(){ openFold(a.getAttribute("href")); });
+});
+openFold(location.hash);
+
+/* ---------- copiar e-mail ---------- */
+var mailEl = document.querySelector(".invite-mail");
+if(mailEl && navigator.clipboard){
+  var copyBtn = document.createElement("button");
+  copyBtn.type = "button"; copyBtn.className = "copy-btn"; copyBtn.textContent = "Copiar e-mail";
+  var copyMsg = document.createElement("span");
+  copyMsg.className = "sr-only"; copyMsg.setAttribute("role","status");
+  mailEl.insertAdjacentElement("afterend", copyBtn);
+  copyBtn.insertAdjacentElement("afterend", copyMsg);
+  copyBtn.addEventListener("click", function(){
+    navigator.clipboard.writeText(mailEl.textContent).then(function(){
+      copyBtn.textContent = "E-mail copiado"; copyMsg.textContent = "E-mail copiado";
+      setTimeout(function(){ copyBtn.textContent = "Copiar e-mail"; copyMsg.textContent = ""; }, 2500);
+    });
+  });
+}
 
 /* ---------- reveal on scroll ---------- */
 var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -182,27 +217,4 @@ if(!reduce && "IntersectionObserver" in window){
   document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in");});
 }
 
-/* ---------- count-up on numbers ---------- */
-function countUp(el){
-  var target = parseInt(el.getAttribute("data-count"),10);
-  if(reduce){ el.textContent = target; return; }
-  var start = null, dur = 1100;
-  function step(ts){
-    if(!start) start = ts;
-    var p = Math.min((ts-start)/dur,1);
-    var eased = 1-Math.pow(1-p,3);
-    el.textContent = Math.round(eased*target);
-    if(p<1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-if("IntersectionObserver" in window){
-  if(!reduce) document.querySelectorAll("[data-count]").forEach(function(el){el.textContent = "0";});
-  var io2 = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){ countUp(en.target); io2.unobserve(en.target);} });
-  },{threshold:.5});
-  document.querySelectorAll("[data-count]").forEach(function(el){io2.observe(el);});
-} else {
-  document.querySelectorAll("[data-count]").forEach(function(el){el.textContent=el.getAttribute("data-count");});
-}
 })();

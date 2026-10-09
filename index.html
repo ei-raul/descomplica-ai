@@ -29,10 +29,13 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a href="#topo" class="brand">Descomplica <span class="ai">AI</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-      <svg class="ic-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 14h14"/></svg>
-      <svg class="ic-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
-    </button>
+    <div class="nav-actions">
+      <a class="nav-cta" href="#escolas">Escolas</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <svg class="ic-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 14h14"/></svg>
+        <svg class="ic-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </div>
     <nav class="nav-links" id="nav-links">
       <a href="#sobre">Visão geral</a>
       <a href="#objetivos">Objetivos</a>
@@ -40,6 +43,7 @@
       <a href="#cronograma">Cronograma</a>
       <a href="#resultados">Resultados</a>
       <a href="#avaliacao">Avaliação</a>
+      <a class="nav-pill" href="#escolas">Escolas</a>
     </nav>
   </div>
 </header>
@@ -47,23 +51,65 @@
 <main id="conteudo">
 <!-- HERO -->
 <div class="hero" id="topo">
-  <div class="glow"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow"><span class="dot"></span>Projeto de Extensão · Sistemas de Informação · UniCatólica</span>
     <h1 class="title"><span class="word">Descomplica</span> <span class="word ai">AI</span></h1>
     <div class="dual">
       <span><b>AI</b> · inteligência artificial</span>
       <span>“descomplica <b>aí</b>” · o jeito da gente</span>
     </div>
     <p class="subtitle">Descomplicando o futuro que já chegou: levar a IA da universidade para a <span class="em">escola e a comunidade</span> de Quixadá — de forma acessível, prática e crítica.</p>
+    <p class="affil">Projeto de Extensão do curso de Sistemas de Informação da UniCatólica.</p>
+
+    <div class="hero-actions">
+      <a class="btn" href="mailto:rauldearaujo@unicatolicaquixada.edu.br?subject=Oficina%20Descomplica%20AI%20na%20nossa%20escola&body=Ol%C3%A1%21%20Gostar%C3%ADamos%20de%20receber%20uma%20oficina%20do%20Descomplica%20AI.%0D%0A%0D%0ANome%3A%0D%0AEscola%3A%0D%0ATurma%3A%0D%0APer%C3%ADodo%20que%20funciona%20melhor%3A%0D%0A">Convide sua escola</a>
+      <a class="hero-link" href="#escolas">Ver como funciona</a>
+    </div>
 
     <div class="facts">
       <div class="fact reveal"><div class="k">Público prioritário</div><div class="v">Ensino médio <small>Quixadá</small></div></div>
-      <div class="fact reveal"><div class="k">Frentes de ação</div><div class="v">6</div></div>
+      <div class="fact reveal"><div class="k">Para a escola</div><div class="v">Gratuito <small>1h–1h30</small></div></div>
       <div class="fact reveal"><div class="k">Executado por</div><div class="v">Alunos <small>1º–6º sem.</small></div></div>
     </div>
   </div>
 </div>
+
+<!-- PARA ESCOLAS -->
+<section id="escolas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><h2>Convide sua escola</h2><p>Gratuito · 1h–1h30 · na sua escola.</p></div>
+    </div>
+    <div class="invite">
+      <div class="invite-main">
+        <ol class="steps reveal">
+          <li><h3>Escreva para o projeto</h3><p>Diga o nome da escola, a turma e o período que funciona melhor.</p></li>
+          <li><h3>Combinamos os detalhes</h3><p>Alinhamos data, turma e horário com você e com a direção.</p></li>
+          <li><h3>A oficina acontece na escola</h3><p>Atividade prática em duplas, com roteiro pronto e supervisão docente.</p></li>
+        </ol>
+        <div class="panel reveal">
+          <h3><span class="pin"></span>A escola oferece</h3>
+          <ul class="checks">
+            <li>Uma sala ou auditório</li>
+            <li>Projetor ou tela</li>
+            <li>Turma e horário na grade</li>
+            <li>Internet e computadores ou celulares</li>
+          </ul>
+        </div>
+        <div class="faq reveal">
+          <details><summary>Quem conduz a oficina?</summary><p>Alunos de Sistemas de Informação da UniCatólica, com supervisão docente em todas as etapas.</p></details>
+          <details><summary>Quando acontecem?</summary><p>O 1º ciclo está previsto a partir de 05 de novembro de 2026 e novas ações a partir de 25 de março de 2027. As datas são aproximadas e ajustáveis.</p></details>
+          <details><summary>Quais temas as oficinas abordam?</summary><p>Temas rotativos por semestre: IA para estudar, ética e deepfakes, profissões do futuro.</p></details>
+        </div>
+      </div>
+      <div class="goal-general invite-cta reveal">
+        <h3 class="lbl">Fale com o projeto</h3>
+        <p>Sem custo para a escola. A gente combina a data com você.</p>
+        <a class="btn" href="mailto:rauldearaujo@unicatolicaquixada.edu.br?subject=Oficina%20Descomplica%20AI%20na%20nossa%20escola&body=Ol%C3%A1%21%20Gostar%C3%ADamos%20de%20receber%20uma%20oficina%20do%20Descomplica%20AI.%0D%0A%0D%0ANome%3A%0D%0AEscola%3A%0D%0ATurma%3A%0D%0APer%C3%ADodo%20que%20funciona%20melhor%3A%0D%0A">Escrever para o projeto</a>
+        <p class="invite-mail">rauldearaujo@unicatolicaquixada.edu.br</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- SOBRE -->
 <section id="sobre">
@@ -94,7 +140,7 @@
       <div class="goal reveal"><span class="n">03</span><p>Refletir sobre ética: desinformação, vieses, privacidade e mundo do trabalho.</p></div>
       <div class="goal reveal"><span class="n">04</span><p>Alertar sobre riscos do uso mal-intencionado da IA, como deepfakes e golpes.</p></div>
       <div class="goal reveal"><span class="n">05</span><p>Produzir conteúdo educativo em mídias sociais, ampliando o alcance.</p></div>
-      <div class="goal reveal"><span class="n">06</span><p>Desenvolver nos executores comunicação, trabalho em equipe e responsabilidade social.</p></div>
+      <div class="goal reveal"><span class="n">06</span><p>Desenvolver nos alunos que executam o projeto comunicação, trabalho em equipe e responsabilidade social.</p></div>
       <div class="goal goal-wide reveal"><span class="n">07</span><p>Aproximar o ensino médio da universidade, despertando interesse pela área de tecnologia.</p></div>
     </div>
   </div>
@@ -137,7 +183,7 @@
         <span class="tag"></span>
         <h3>Evento no Campus / SATI</h3>
         <div class="role">O evento-âncora</div>
-        <p>Feira de IA na UniCatólica: estandes, demonstrações, minioficinas e tour pelos laboratórios para as escolas visitantes.</p>
+        <p>Feira de IA na UniCatólica, durante a SATI (Semana Acadêmica): estandes, demonstrações, minioficinas e tour pelos laboratórios para as escolas visitantes.</p>
         <div class="more"><p>É aqui que o adolescente pisa no campus e se imagina ali — o momento mais forte para despertar o desejo de ingressar.</p></div>
       </div>
       <div class="frente reveal" data-frente="seguranca">
@@ -152,10 +198,16 @@
         <span class="toggle" aria-hidden="true">+</span>
         <span class="tag"></span>
         <h3>Coordenação &amp; Gestão</h3>
-        <div class="role">Cross-cutting · bastidores</div>
+        <div class="role">Em todas as frentes · bastidores</div>
         <p>Estruturação das equipes, parcerias com escolas e avaliação contínua que mantém o projeto melhorando a cada ciclo.</p>
         <div class="more"><p>Times pequenos com um líder cada, ensaio-geral antes de ir a campo e supervisão docente em todas as etapas.</p></div>
       </div>
+    </div>
+    <div class="exemplo reveal">
+      <div class="exemplo-lbl">Exemplo ilustrativo de oficina</div>
+      <div class="msg msg-user"><span class="who">Você</span><p>Explique o que é um deepfake como se eu tivesse 15 anos.</p></div>
+      <div class="msg msg-ia"><span class="who">IA</span><p>Deepfake é um vídeo, áudio ou imagem feito ou alterado por inteligência artificial para parecer real. Pode ser usado para brincar, mas também para enganar. Por isso vale desconfiar e conferir a fonte.</p></div>
+      <p class="exemplo-note">É o tipo de pergunta que as oficinas exploram: usar IA para estudar e entender como a máquina “pensa”.</p>
     </div>
   </div>
 </section>
@@ -196,26 +248,30 @@
       <div><h2>Cronograma em duas trilhas</h2><p>O que já está planejado e o que sugerimos acrescentar. Filtre por trilha e por frente.</p></div>
     </div>
 
-    <p class="legend-note reveal"><b class="o">■ Confirmado</b> — marcos e datas já planejados (aproximados, ainda ajustáveis). &nbsp; <b class="v">▢ Sugerido</b> — ações que agregam valor ao projeto.</p>
+    <details class="fold">
+      <summary>Ver o cronograma completo</summary>
+      <p class="legend-note reveal"><b class="o"><span aria-hidden="true">■</span> Confirmado</b> — marcos e datas já planejados (aproximados, ainda ajustáveis). <b class="v"><span aria-hidden="true">▢</span> Sugerido</b> — ações que agregam valor ao projeto.</p>
 
-    <div class="tl-controls reveal">
-      <div class="filter-group">
-        <div class="fg-label">Trilha</div>
-        <div class="segbar" id="trackBar">
-          <button class="seg active" data-track="all" aria-pressed="true">Tudo</button>
-          <button class="seg" data-track="confirmado" aria-pressed="false"><span class="swatch"></span>Confirmado</button>
-          <button class="seg" data-track="sugerido" aria-pressed="false"><span class="swatch"></span>Sugerido</button>
+      <div class="tl-controls reveal">
+        <div class="filter-group">
+          <div class="fg-label" id="lblTrilha">Trilha</div>
+          <div class="segbar" id="trackBar" role="group" aria-labelledby="lblTrilha">
+            <button class="seg active" data-track="all" aria-pressed="true">Tudo</button>
+            <button class="seg" data-track="confirmado" aria-pressed="false"><span class="swatch"></span>Confirmado</button>
+            <button class="seg" data-track="sugerido" aria-pressed="false"><span class="swatch"></span>Sugerido</button>
+          </div>
+        </div>
+        <div class="filter-group fill">
+          <div class="fg-label" id="lblFrente">Frente</div>
+          <div class="frente-filter" id="frenteBar" role="group" aria-labelledby="lblFrente"></div>
         </div>
       </div>
-      <div class="filter-group fill">
-        <div class="fg-label">Frente</div>
-        <div class="frente-filter" id="frenteBar"></div>
-      </div>
-    </div>
 
-    <div class="timeline" id="timeline"><noscript><p class="legend-note">As ações do cronograma são carregadas com JavaScript. Ative-o para vê-las.</p></noscript></div>
-    <p class="sr-only" id="tlCount" role="status"></p>
-    <div class="tl-empty" id="tlEmpty">Nenhuma ação com esses filtros.</div>
+      <noscript><p class="legend-note">As ações do cronograma são carregadas com JavaScript. Ative-o para vê-las.</p></noscript>
+      <ol class="timeline" id="timeline"></ol>
+      <p class="sr-only" id="tlCount" role="status"></p>
+      <div class="tl-empty" id="tlEmpty">Nenhuma ação com esses filtros. <button class="ff" id="tlReset" type="button">Limpar filtros</button></div>
+    </details>
   </div>
 </section>
 
@@ -227,10 +283,10 @@
       <div><h2>Resultados esperados</h2><p>O que está planejado e o que muda para cada público.</p></div>
     </div>
     <div class="metas">
-      <div class="metric reveal"><div class="big" data-count="2">2</div><div class="lbl">ciclos de oficinas “Mão na IA” nas escolas</div></div>
-      <div class="metric reveal"><div class="big" data-count="1">1</div><div class="lbl">participação na SATI</div></div>
-      <div class="metric reveal"><div class="big" data-count="1">1</div><div class="lbl">evento-âncora no campus</div></div>
-      <div class="metric reveal"><div class="big" data-count="2">2</div><div class="lbl">rodas de conversa por edição</div></div>
+      <div class="metric reveal"><div class="big">2</div><div class="lbl">ciclos de oficinas “Mão na IA” nas escolas</div></div>
+      <div class="metric reveal"><div class="big">1</div><div class="lbl">participação na SATI</div></div>
+      <div class="metric reveal"><div class="big">1</div><div class="lbl">evento-âncora no campus</div></div>
+      <div class="metric reveal"><div class="big">2</div><div class="lbl">rodas de conversa por edição</div></div>
     </div>
     <div class="result-cols">
       <div class="rescol reveal"><h3>Para a comunidade</h3><p>Mais compreensão sobre IA e população mais atenta a golpes e desinformação.</p></div>
@@ -247,35 +303,38 @@
       <span class="sec-num">07</span>
       <div><h2>Como avaliamos</h2><p>Avaliação contínua e processual em três dimensões.</p></div>
     </div>
-    <div class="eval">
-      <div class="ecard reveal">
-        <div class="num">01</div><h3>Impacto no público</h3>
-        <ul>
-          <li>Nº de escolas e de pessoas atendidas</li>
-          <li>Alcance e engajamento nas redes</li>
-          <li>Satisfação por QR code ao fim das ações</li>
-          <li>Percepção antes × depois das oficinas</li>
-        </ul>
+    <details class="fold">
+      <summary>Ver as três dimensões</summary>
+      <div class="eval">
+        <div class="ecard reveal">
+          <div class="num">01</div><h3>Impacto no público</h3>
+          <ul>
+            <li>Nº de escolas e de pessoas atendidas</li>
+            <li>Alcance e engajamento nas redes</li>
+            <li>Satisfação por QR code ao fim das ações</li>
+            <li>Percepção antes × depois das oficinas</li>
+          </ul>
+        </div>
+        <div class="ecard reveal">
+          <div class="num">02</div><h3>Formação dos alunos</h3>
+          <ul>
+            <li>Comprometimento e qualidade da atuação dos alunos</li>
+            <li>Competências extensionistas desenvolvidas</li>
+            <li>Autoavaliação e avaliação entre pares</li>
+            <li>Rodas de feedback a cada ciclo</li>
+          </ul>
+        </div>
+        <div class="ecard reveal">
+          <div class="num">03</div><h3>Gestão do projeto</h3>
+          <ul>
+            <li>Reuniões periódicas de acompanhamento</li>
+            <li>Balanço ao fim de cada semestre</li>
+            <li>Registros: relatórios, fotos, depoimentos</li>
+            <li>Base para o relatório final e a 2ª edição</li>
+          </ul>
+        </div>
       </div>
-      <div class="ecard reveal">
-        <div class="num">02</div><h3>Formação dos executores</h3>
-        <ul>
-          <li>Comprometimento e qualidade da atuação</li>
-          <li>Competências extensionistas desenvolvidas</li>
-          <li>Autoavaliação e avaliação entre pares</li>
-          <li>Rodas de feedback a cada ciclo</li>
-        </ul>
-      </div>
-      <div class="ecard reveal">
-        <div class="num">03</div><h3>Gestão do projeto</h3>
-        <ul>
-          <li>Reuniões periódicas de acompanhamento</li>
-          <li>Balanço ao fim de cada semestre</li>
-          <li>Registros: relatórios, fotos, depoimentos</li>
-          <li>Base para a prestação de contas e a 2ª edição</li>
-        </ul>
-      </div>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -283,6 +342,11 @@
 
 <footer>
   <div class="wrap">
+    <div class="foot-cta">
+      <div class="fk">Sua escola quer receber uma oficina?</div>
+      <a class="btn" href="mailto:rauldearaujo@unicatolicaquixada.edu.br?subject=Oficina%20Descomplica%20AI%20na%20nossa%20escola&body=Ol%C3%A1%21%20Gostar%C3%ADamos%20de%20receber%20uma%20oficina%20do%20Descomplica%20AI.%0D%0A%0D%0ANome%3A%0D%0AEscola%3A%0D%0ATurma%3A%0D%0APer%C3%ADodo%20que%20funciona%20melhor%3A%0D%0A">Escrever para o projeto</a>
+      <p class="foot-mail">rauldearaujo@unicatolicaquixada.edu.br</p>
+    </div>
     <div class="foot-grid">
       <div><div class="fk">Proponente</div><div class="fv"><a href="https://ei-raul.github.io/">Prof. Raul de Araujo</a></div></div>
     </div>

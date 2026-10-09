@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-09T01:01:24.376188+00:00",
+  "generatedAt": "2026-10-09T01:15:02.654057+00:00",
   "title": "Design System: Descomplica AI",
   "extensions": {
     "colorMeta": {
@@ -168,6 +168,81 @@
           "#D4C8BC",
           "#F5E9DB"
         ]
+      },
+      "menta": {
+        "role": "tertiary",
+        "displayName": "Menta",
+        "canonical": "#3F9D74",
+        "tonalRamp": [
+          "#061B11",
+          "#113626",
+          "#1E533C",
+          "#2C7254",
+          "#3B936D",
+          "#6BB793",
+          "#A0DABC",
+          "#CCF7E0"
+        ]
+      },
+      "menta-soft": {
+        "role": "tertiary",
+        "displayName": "Menta Suave",
+        "canonical": "#DCEBE4",
+        "tonalRamp": [
+          "#151616",
+          "#2D2E2D",
+          "#464847",
+          "#606462",
+          "#7C827F",
+          "#9EA7A3",
+          "#C1CEC8",
+          "#E1EFE8"
+        ]
+      },
+      "ambar": {
+        "role": "tertiary",
+        "displayName": "Âmbar",
+        "canonical": "#D98A1E",
+        "tonalRamp": [
+          "#1F1307",
+          "#3F280D",
+          "#623F13",
+          "#885718",
+          "#B0701B",
+          "#DE9130",
+          "#FCBC77",
+          "#FFE0AA"
+        ]
+      },
+      "rosa": {
+        "role": "tertiary",
+        "displayName": "Rosa",
+        "canonical": "#C0556B",
+        "tonalRamp": [
+          "#290A11",
+          "#4C1B26",
+          "#722E3C",
+          "#9A4254",
+          "#C2596E",
+          "#E08795",
+          "#FBB4BF",
+          "#FFDBE2"
+        ]
+      },
+      "rosa-soft": {
+        "role": "tertiary",
+        "displayName": "Rosa Suave",
+        "canonical": "#F3DDE0",
+        "tonalRamp": [
+          "#181516",
+          "#302D2D",
+          "#4A4747",
+          "#686162",
+          "#877D7F",
+          "#AFA0A2",
+          "#D8C5C8",
+          "#FAE5E8"
+        ]
       }
     },
     "typographyMeta": {
@@ -290,7 +365,12 @@
     "rules": [
       {
         "name": "The Two Inks Rule",
-        "body": "Laranja significa confirmado e ação; violeta significa sugerido e apoio. Nunca troque os papéis e nunca introduza uma terceira cor de destaque.",
+        "body": "Laranja significa confirmado e ação; violeta significa sugerido e apoio. Nunca troque os papéis e nunca introduza uma terceira cor de destaque. Menta, Âmbar e Rosa identificam só a categoria da frente (pontos e ícones), nunca texto, ação nem estado.",
+        "section": "colors"
+      },
+      {
+        "name": "The Small Text Rule",
+        "body": "Texto laranja abaixo de 24px (ou 18,66px em negrito) usa Tinta Brasa, não o laranja puro: o laranja puro mede 3,1:1 sobre Aveia. Sobre o fundo laranja, o texto é Tinta Ameixa.",
         "section": "colors"
       },
       {
@@ -319,12 +399,14 @@
       "**Do** usar laranja só para confirmado/ação e violeta só para sugerido/apoio.",
       "**Do** usar as variáveis de `:root` (`--orange`, `--violet`, `--ink`, `--radius`, `--shadow`); nunca hex solto.",
       "**Do** fazer hierarquia com Bricolage + Inter + Space Mono, nesta ordem de papel: título, leitura, anotação.",
+      "**Do** manter 12px como tamanho mínimo de qualquer texto, e usar Tinta Brasa em texto laranja pequeno.",
       "**Do** manter cartões brancos com borda de 1px em Fio Quente e sombra ambiente; levantar só no hover.",
       "**Do** usar pílula para qualquer controle, e `prefers-reduced-motion` para toda animação nova."
     ],
     "donts": [
       "**Don't** usar branco puro como fundo de página nem preto puro como texto.",
       "**Don't** adicionar uma terceira cor de destaque ou gradientes de texto.",
+      "**Don't** usar o laranja puro (#E8641A) como cor de texto pequeno nem texto branco sobre fundo laranja.",
       "**Don't** usar itálico fora da assinatura \"AI\".",
       "**Don't** usar sombras pesadas em repouso nem cantos agudos.",
       "**Don't** usar Space Mono para parágrafos nem caixa-alta em frases longas.",

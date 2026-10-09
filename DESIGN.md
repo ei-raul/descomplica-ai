@@ -8,6 +8,11 @@ colors:
   jabuticaba: "#6B49B6"
   jabuticaba-soft: "#EBE3F8"
   jabuticaba-ink: "#4A2E86"
+  menta: "#3F9D74"
+  menta-soft: "#DCEBE4"
+  ambar: "#D98A1E"
+  rosa: "#C0556B"
+  rosa-soft: "#F3DDE0"
   aveia: "#FBF4EC"
   papel: "#FFFFFF"
   tinta-ameixa: "#221A2B"
@@ -38,7 +43,7 @@ typography:
     lineHeight: 1.6
   label:
     fontFamily: "Space Mono, ui-monospace, monospace"
-    fontSize: "11px"
+    fontSize: "12px"
     fontWeight: 400
     letterSpacing: "0.08em"
 rounded:
@@ -77,7 +82,7 @@ components:
     textColor: "{colors.papel}"
   segment-confirmado-active:
     backgroundColor: "{colors.brasa}"
-    textColor: "{colors.papel}"
+    textColor: "{colors.tinta-ameixa}"
   segment-sugerido-active:
     backgroundColor: "{colors.jabuticaba}"
     textColor: "{colors.papel}"
@@ -100,6 +105,12 @@ components:
     textColor: "{colors.nevoa}"
     rounded: "{rounded.pill}"
     padding: "8px 12px"
+  nav-toggle:
+    backgroundColor: "{colors.papel}"
+    textColor: "{colors.tinta-ameixa}"
+    rounded: "{rounded.pill}"
+    height: "44px"
+    width: "44px"
   nav-link-active:
     backgroundColor: "{colors.brasa-soft}"
     textColor: "{colors.brasa-ink}"
@@ -127,14 +138,17 @@ A densidade é média e arejada: seções de 66px de respiro verticais, cartões
 Duas tintas quentes sobre papel de aveia, com tintas escuras de ameixa para texto. Toda cor tem uma versão `soft` (fundo de etiqueta) e uma `ink` (texto sobre o soft), que garantem contraste legível.
 
 ### Primary
-- **Laranja Brasa** (#E8641A): destaque e ação. Itálico "AI" do título e da marca, números das seções, métricas, setas das listas, ponto do eyebrow, trilha **confirmado** do cronograma e botão ativo dessa trilha.
+- **Laranja Brasa** (#E8641A): destaque e ação, só em fundos, bordas, ícones e texto grande (≥24px, ou ≥18,66px em negrito). Itálico "AI" do título e da marca, métricas, setas das listas, ponto do eyebrow, trilha **confirmado** do cronograma e fundo do botão ativo dessa trilha.
 - **Brasa Suave** (#FBE3D0): fundo de link ativo da navegação, badge confirmado, ícone da frente de oficinas.
-- **Tinta Brasa** (#9C3D07): texto sobre Brasa Suave e destaques em negrito de rótulos (`.dual b`).
+- **Tinta Brasa** (#9C3D07): todo texto laranja pequeno: números das seções e dos objetivos, link do rodapé, texto sobre Brasa Suave e destaques em negrito de rótulos (`.dual b`). Contraste de 6,2 a 6,8:1.
 
 ### Secondary
 - **Violeta Jabuticaba** (#6B49B6): apoio e reflexão. Trilha **sugerido** (borda tracejada), numeração das avaliações, borda das colunas de resultados, ponto dos painéis.
 - **Jabuticaba Suave** (#EBE3F8): fundo de chips de local e badge sugerido.
 - **Tinta Jabuticaba** (#4A2E86): negritos de destaque em leads e no subtítulo, texto sobre Jabuticaba Suave.
+
+### Tertiary (categorias das frentes)
+- **Menta** (#3F9D74), **Âmbar** (#D98A1E), **Rosa** (#C0556B): pontos de legenda das frentes Rodas, Evento/SATI e Segurança nos filtros e no cronograma. **Menta Suave** (#DCEBE4) e **Rosa Suave** (#F3DDE0) são os ícones dos cartões dessas frentes. As outras três frentes reaproveitam Tinta Ameixa, Laranja e Violeta.
 
 ### Neutral
 - **Aveia** (#FBF4EC): fundo da página e da barra de navegação (com 82% de opacidade e blur).
@@ -144,7 +158,9 @@ Duas tintas quentes sobre papel de aveia, com tintas escuras de ameixa para text
 - **Fio Quente** (#EEE1D3): todas as bordas e divisores de seção.
 
 ### Named Rules
-**The Two Inks Rule.** Laranja significa confirmado e ação; violeta significa sugerido e apoio. Nunca troque os papéis e nunca introduza uma terceira cor de destaque. A frente "IA & Segurança" e "Rodas de Conversa" usam tons soft próprios (rosado e verde-menta) apenas como ícone de categoria, nunca como cor de texto ou ação.
+**The Two Inks Rule.** Laranja significa confirmado e ação; violeta significa sugerido e apoio. Nunca troque os papéis e nunca introduza uma terceira cor de destaque. Menta, Âmbar e Rosa identificam só a categoria da frente (pontos e ícones), nunca texto, ação nem estado.
+
+**The Small Text Rule.** Texto laranja abaixo de 24px (ou 18,66px em negrito) usa Tinta Brasa, não o laranja puro: o laranja puro mede 3,1:1 sobre Aveia. Sobre o fundo laranja, o texto é Tinta Ameixa.
 
 **The Oat Paper Rule.** O fundo é sempre Aveia ou Papel dentro de cartão. Nunca branco puro de página, nunca preto puro.
 
@@ -161,7 +177,7 @@ Duas tintas quentes sobre papel de aveia, com tintas escuras de ameixa para text
 - **Headline** (700, `clamp(28px, 4vw, 40px)`, 1.05, tracking -0.03em): títulos de seção (`h2`).
 - **Title** (700, 15–18px, tracking -0.01 a -0.02em): títulos de cartão (`h3`, `h4`).
 - **Body** (400, 14–15px, 1.6): texto de cartões e listas; o `lead` sobe para 18px e limita-se a 760px.
-- **Label** (400–700, 10–13px, tracking 0.06–0.14em, caixa-alta): eyebrow, rótulos de filtro, funções das frentes, datas, badges, números de seção e de objetivo.
+- **Label** (400–700, 12–13px, tracking 0.06–0.14em, caixa-alta): eyebrow, rótulos de filtro, funções das frentes, datas, badges, números de seção e de objetivo.
 
 ### Named Rules
 **The Annotation Rule.** Space Mono entra para o que é dado e anotação (datas, números, rótulos, chips), nunca para parágrafos. Caixa-alta só em rótulos curtos de até quatro palavras.
@@ -197,7 +213,7 @@ Formas amigáveis e arredondadas, sem cantos agudos. Cartões grandes usam 16px 
 - **Shape:** pílula (999px) dentro de uma barra pílula com padding de 4px.
 - **Default:** fundo transparente, texto Névoa, 13px/600.
 - **Hover:** texto passa a Tinta Ameixa.
-- **Active:** fundo Tinta Ameixa e texto branco; os segmentos de trilha assumem a cor da própria trilha (laranja ou violeta) e o swatch fica branco.
+- **Active:** fundo Tinta Ameixa e texto branco; os segmentos de trilha assumem a cor da própria trilha: violeta com texto branco; laranja com texto Tinta Ameixa (contraste), e o swatch acompanha o texto. Em telas de toque (`pointer: coarse`) a altura mínima é 44px.
 - Interação de filtro: não há botão primário "grande"; ação é filtro, não conversão.
 
 ### Chips
@@ -213,10 +229,10 @@ Formas amigáveis e arredondadas, sem cantos agudos. Cartões grandes usam 16px 
 - **Internal Padding:** 18–26px; 30px no cartão escuro.
 
 ### Navigation
-Barra fixa de 64px sobre Aveia a 82% com blur de 12px e fio quente embaixo. Marca à esquerda em Bricolage 800/18px com "AI" em itálico laranja. Links em pílulas de 13.5px/500 em Névoa; o link da seção visível ganha Brasa Suave e Tinta Brasa. Abaixo de 860px os links somem (ainda não há menu alternativo).
+Barra fixa de 64px sobre Aveia a 82% com blur de 12px e fio quente embaixo. Marca à esquerda em Bricolage 800/20px com "AI" em itálico laranja (20px o qualifica como texto grande). Links em pílulas de 13.5px/500 em Névoa; o link da seção visível ganha Brasa Suave e Tinta Brasa. Abaixo de 860px os links viram um painel que abre sob o cabeçalho por um botão de menu em pílula (44px, hambúrguer que vira ×), com `aria-expanded`; fecha ao tocar num link, fora do painel ou com Esc. Sem JavaScript, os links ficam escondidos. O primeiro item da página é o link "Pular para o conteúdo", em pílula Tinta Ameixa, visível só no foco.
 
 ### Frente (cartão expansível)
-Cartão com ícone quadrado colorido (34px, 10px de raio), título, função em mono caixa-alta e resumo; um `+` mono no canto vira `×` ao abrir e revela um texto extra por transição de altura.
+Cartão com ícone quadrado colorido (34px, 10px de raio), título, função em mono caixa-alta e resumo; um `+` mono no canto vira `×` ao abrir e revela um texto extra por transição de altura. O título é um `<button>` com `aria-expanded` criado pelo JS e estendido ao cartão inteiro; o foco aparece como contorno violeta de 2px em volta do cartão. Sem JS, o texto extra fica sempre visível.
 
 ### Cronograma (signature)
 Linha vertical em gradiente laranja→violeta com marcadores circulares. **Confirmado**: marcador cheio laranja e borda esquerda sólida. **Sugerido**: marcador tracejado violeta, borda esquerda tracejada. Cada cartão tem badge de trilha, frente com ponto de cor, título, descrição e carga horária em caixa mono.
@@ -228,12 +244,14 @@ Linha vertical em gradiente laranja→violeta com marcadores circulares. **Confi
 - **Do** usar laranja só para confirmado/ação e violeta só para sugerido/apoio.
 - **Do** usar as variáveis de `:root` (`--orange`, `--violet`, `--ink`, `--radius`, `--shadow`); nunca hex solto.
 - **Do** fazer hierarquia com Bricolage + Inter + Space Mono, nesta ordem de papel: título, leitura, anotação.
+- **Do** manter 12px como tamanho mínimo de qualquer texto, e usar Tinta Brasa em texto laranja pequeno.
 - **Do** manter cartões brancos com borda de 1px em Fio Quente e sombra ambiente; levantar só no hover.
 - **Do** usar pílula para qualquer controle, e `prefers-reduced-motion` para toda animação nova.
 
 ### Don't:
 - **Don't** usar branco puro como fundo de página nem preto puro como texto.
 - **Don't** adicionar uma terceira cor de destaque ou gradientes de texto.
+- **Don't** usar o laranja puro (#E8641A) como cor de texto pequeno nem texto branco sobre fundo laranja.
 - **Don't** usar itálico fora da assinatura "AI".
 - **Don't** usar sombras pesadas em repouso nem cantos agudos.
 - **Don't** usar Space Mono para parágrafos nem caixa-alta em frases longas.

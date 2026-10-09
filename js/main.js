@@ -66,7 +66,7 @@ ITEMS.forEach(function(it){
         '<span class="tl-badge '+it.track+'">'+(it.track==="confirmado"?"Confirmado":"Sugerido")+'</span>'+
         '<span class="tl-frente"><span class="d" style="background:'+f.color+'"></span>'+f.label+'</span>'+
       '</div>'+
-      '<h4>'+it.title+'</h4>'+
+      '<h3>'+it.title+'</h3>'+
       '<p>'+it.desc+'</p>'+
       (it.carga?'<span class="tl-carga">carga · '+it.carga+'</span>':'')+
     '</div>';
@@ -136,6 +136,20 @@ function onScroll(){
 }
 window.addEventListener("scroll", onScroll, {passive:true});
 onScroll();
+
+/* ---------- menu mobile ---------- */
+var navEl = document.querySelector("header.nav");
+var navBtn = navEl.querySelector(".nav-toggle");
+navEl.classList.add("js");
+function setMenu(open){
+  navEl.classList.toggle("open", open);
+  navBtn.setAttribute("aria-expanded", open);
+}
+navBtn.addEventListener("click", function(){ setMenu(!navEl.classList.contains("open")); });
+links.forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+document.addEventListener("keydown", function(e){
+  if(e.key==="Escape" && navEl.classList.contains("open")){ setMenu(false); navBtn.focus(); }
+});
 
 /* ---------- reveal on scroll ---------- */
 var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
